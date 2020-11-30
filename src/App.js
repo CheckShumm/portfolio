@@ -1,11 +1,8 @@
-import Header from "./views/Header";
-import "./App.css";
+import Header from "views/header/Header"
 function App() {
   return (
     <div>
-      <Header>
-        Nathan Shummoogum
-      </Header>
+      <Header/>
     </div>
   );
 }
