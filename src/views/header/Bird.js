@@ -29,7 +29,6 @@ const BirdContainer = styled.div`
 `;
 
 function Bird({velocity, delay, flapVelocity, flapDelay}) {
-    console.log("BIRDY:", flapVelocity, flapDelay);
     return (
         <BirdContainer
             velocity={velocity}

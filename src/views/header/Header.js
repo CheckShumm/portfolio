@@ -4,6 +4,7 @@ import IconLinkedIn from 'icons/IconLinkedIn';
 import IconResume from 'icons/IconResume';
 import IconGithub from 'icons/IconGithub';
 import Bird from './Bird';
+import Tree from './Tree';
 
 import "styles/App.scss";
 
@@ -33,11 +34,15 @@ const ProfileContainer = styled.div`
     mix-blend-mode: difference;
     left: 50%;
     top: 50%;
+    z-index: 1;
     transform: translate(-50%, -50%);
 `
 
 const Container = styled.div`
     height: 100vh;
+    padding: 0px;
+    position: relative;
+    z-index: 10;
     background-size: cover; /* or contain depending on what you want */
     background-position: center center;
     background-image: linear-gradient(
@@ -95,6 +100,7 @@ const renderBirds = (numBirds) => {
 function Header() {
     return (
         <Container>
+            <Tree/>
             <ProfileContainer>
                 <Title>
                     Nathan Shummoogum
