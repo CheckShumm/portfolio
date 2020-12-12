@@ -17,11 +17,29 @@ const Title = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    font-size: 3.3vw;
+    font-size: 2.2vw;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 4px;
     text-align: center;
     text-transform: uppercase;
+    color: white;
+    mix-blend-mode: difference;
+    animation: fade-in 2s;
+`;
+
+const SubTitle = styled.div`
+    height: 1.0vw;
+    padding: 8px;
+    z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
     color: white;
     mix-blend-mode: difference;
     animation: fade-in 2s;
@@ -32,8 +50,8 @@ const ProfileContainer = styled.div`
     padding: 10px;
     position: fixed;
     mix-blend-mode: difference;
-    left: 30%;
-    top: 60%;
+    left: 50%;
+    top: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
 `
@@ -67,8 +85,8 @@ const Icon = styled.div`
     transition: all 0.3s ease; 
     margin: 8px;
     fill: white;
-    height: 4vw;
-    width: 4vw;
+    height: 3vw;
+    width: 3vw;
     animation: fade-in 5s;
     &:hover {
         fill: #888888;
@@ -87,9 +105,9 @@ const renderBirds = (numBirds) => {
         birds.push(
             <Bird
                 key={i}
-                velocity={10*Math.random() + 2}
+                velocity={6*Math.random() + 2}
                 delay={2*Math.random()}
-                flapVelocity={3*Math.random()+ 0.25}
+                flapVelocity={2*Math.random()+ 0.25}
                 flapDelay={-2*Math.random() - 0.25}
             />
         )
@@ -102,9 +120,14 @@ function Header() {
         <Container>
             <Tree/>
             <ProfileContainer>
-                <Title>
-                    Nathan Shummoogum
-                </Title>
+                <Title> Nathan Shummoogum </Title>
+                <SubTitle> I like to code.</SubTitle>
+                <Row>
+                <SubTitle> About Me </SubTitle>
+                <SubTitle>| Projects |</SubTitle>
+                <SubTitle> Experience </SubTitle>
+                </Row>
+
                 <Row>
                     <Icon>
                         <IconLinkedIn/>
