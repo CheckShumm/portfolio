@@ -32,8 +32,8 @@ const ProfileContainer = styled.div`
     padding: 10px;
     position: fixed;
     mix-blend-mode: difference;
-    left: 50%;
-    top: 50%;
+    left: 30%;
+    top: 60%;
     z-index: 1;
     transform: translate(-50%, -50%);
 `
@@ -46,9 +46,9 @@ const Container = styled.div`
     background-size: cover; /* or contain depending on what you want */
     background-position: center center;
     background-image: linear-gradient(
-        110deg,  
-        rgba(245, 236, 213, 1.0) 50%,
-        rgba(8, 50, 92, 0.8) 50%);
+        165deg,  
+        rgba(240, 232, 192, 1.0) 50%,
+        rgba(240, 232, 192, 0.8) 50%);
     text-align:center;
 `;
 
