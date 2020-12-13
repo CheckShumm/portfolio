@@ -22,7 +22,7 @@ const Title = styled.div`
     letter-spacing: 4px;
     text-align: center;
     text-transform: uppercase;
-    color: white;
+    color: rgb(50, 74, 125);
     mix-blend-mode: difference;
     animation: fade-in 2s;
 `;
@@ -40,16 +40,16 @@ const SubTitle = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
     text-align: center;
-    color: white;
+    color: rgb(50, 74, 125);
     mix-blend-mode: difference;
     animation: fade-in 2s;
 `;
 
 const ProfileContainer = styled.div`
-    border: 3px solid white;
+    border: 3px solid rgb(50, 74, 125);
+    box-shadow: 6px 6px rgba(50, 74, 125, 0.4);
     padding: 10px;
     position: fixed;
-    mix-blend-mode: difference;
     left: 50%;
     top: 50%;
     z-index: 1;
@@ -65,8 +65,8 @@ const Container = styled.div`
     background-position: center center;
     background-image: linear-gradient(
         165deg,  
-        rgba(240, 232, 192, 1.0) 50%,
-        rgba(240, 232, 192, 0.8) 50%);
+        rgba(240, 232, 192, 0.8) 50%,
+        rgba(240, 232, 192, 0.6) 50%);
     text-align:center;
 `;
 
@@ -84,7 +84,7 @@ const Icon = styled.div`
     justify-content: center;
     transition: all 0.3s ease; 
     margin: 8px;
-    fill: white;
+    fill: rgb(50, 74, 125);
     height: 3vw;
     width: 3vw;
     animation: fade-in 5s;
@@ -105,9 +105,9 @@ const renderBirds = (numBirds) => {
         birds.push(
             <Bird
                 key={i}
-                velocity={6*Math.random() + 2}
+                velocity={10*Math.random() + 5}
                 delay={2*Math.random()}
-                flapVelocity={2*Math.random()+ 0.25}
+                flapVelocity={2*Math.random()+ 1}
                 flapDelay={-2*Math.random() - 0.25}
             />
         )

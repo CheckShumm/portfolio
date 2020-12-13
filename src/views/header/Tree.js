@@ -58,7 +58,7 @@ class Tree extends Component {
     }
 
     async drawCurrentLevelBranches() {
-        await timer(400);
+        await timer(300);
         for (let branch of this.branches) {
             this.computeBranchPath(branch);
             this.drawBranch(branch);
@@ -115,8 +115,13 @@ class Tree extends Component {
             // draw a line segment between waypoints
             ctx.beginPath();
             ctx.lineCap = "round";
+            // ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+            // ctx.lineWidth = branch.width;  
+            // ctx.moveTo(points[t-1][0], points[t-1][1]);
+            // ctx.lineTo(points[t][0], points[t][1]);
+            // ctx.stroke();
             ctx.strokeStyle = 'rgba(219, 207, 175,0.5)';
-            ctx.lineWidth = branch.width;  
+            ctx.lineWidth = branch.width-1;  
             ctx.moveTo(points[t-1][0], points[t-1][1]);
             ctx.lineTo(points[t][0], points[t][1]);
             ctx.stroke();
@@ -133,7 +138,8 @@ class Tree extends Component {
             ctx.beginPath();
             let radius = t;
             ctx.arc(branch.x, branch.y, radius, 0, 2 * Math.PI);
-            ctx.strokeStyle = "rgba(176, 204, 165,0.015)";
+            ctx.strokeStyle = 'rgba(176, 204, 165, 0.5)';
+            //ctx.strokeStyle = "rgba(150, 175, 140,0.15)";
             ctx.stroke();
             ctx.fillStyle = "rgba(176, 204, 165," + t*0.015 + ")" ;
             ctx.fill();
